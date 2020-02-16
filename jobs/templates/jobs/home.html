@@ -1,1 +1,7 @@
- hello world
+<h1>All my jobs</h1>
+{% for job in jobs.all %}
+<div>
+  {{ job.summary }}
+</div>
+
+{% endfor %}
