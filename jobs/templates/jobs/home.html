@@ -1,9 +1,3 @@
-<h1>All my jobs</h1>
-{% for job in jobs.all %}
-<div>
-  {{ job.summary }}
-</div>
-{% endfor %}
 <!DOCTYPE html>
 <html lang="en">
   {% load static %}
@@ -19,6 +13,14 @@
       <p>Hi my name is Raphael, I enjoy making apps and riding my bike</p>
       <a href="#">Email Me</a>
       <img src="{% static 'author.jpg' %}" alt="Author" />
+    </div>
+    <div class="row">
+      {% for job in jobs.all %}
+      <div class="card">
+        <img src="{{ job.image.url }}" alt="" />
+        {{ job.summary }}
+      </div>
+      {% endfor %}
     </div>
   </body>
 </html>
