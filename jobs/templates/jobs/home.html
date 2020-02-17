@@ -6,16 +6,24 @@
 {% endfor %}
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raphael Jay Bernardo</title>
+    <style>
+      img {
+        height: 200px;
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1>Raphael Jay Bernardo</h1>
       <p>Hi my name is Raphael, I enjoy making apps and riding my bike</p>
       <a href="#">Email Me</a>
+      <img src="{% static 'author.jpg' %}" alt="Author" />
     </div>
   </body>
 </html>
